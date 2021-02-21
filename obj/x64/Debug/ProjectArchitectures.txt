@@ -1,0 +1,1 @@
+C:\Users\ToanNg\Desktop\BMS\App1\App1.csproj;x64
