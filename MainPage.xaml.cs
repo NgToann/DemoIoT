@@ -21,6 +21,8 @@ using Windows.UI.Xaml.Navigation;
 using System.Diagnostics;
 using Windows.UI.Core;
 using MQTTnet.Extensions.ManagedClient;
+using System.Net.Http;
+using System.Net.Http.Headers;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -39,7 +41,7 @@ namespace App1
         public MqttFactory factory;
         public IMqttClient mqttClient;
         DispatcherTimer timerReSend;
-
+        static HttpClient client = new HttpClient();
         //public MqttClientOptions options;
         //public IManagedMqttClient mqttClient = new MqttFactory().CreateManagedMqttClient();
         public MainPage()
@@ -73,6 +75,13 @@ namespace App1
                 Debug.WriteLine(error_exception);
             }
         }
+
+        public void getConfigInforClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        
 
         public void submitButtonClick(object sender, RoutedEventArgs e)
         {

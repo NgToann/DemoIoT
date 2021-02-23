@@ -10,34 +10,78 @@ namespace ConsoleApp1
 {
     class Program
     {
-        static HttpClient client = new HttpClient();
-        static void Main(string[] args)
+        static HttpClient client;
+        static MQTTCredential mQTTCredential;
+        static string API_ENDPOINT = "http://34.87.20.124";
+        static async Task Main(string[] args)
         {
             // 
-            client.BaseAddress = new Uri("http://34.87.20.124/");
+            //client.BaseAddress = new Uri("http://34.87.20.124/");
+            //client.DefaultRequestHeaders.Accept.Clear();
+            //client.DefaultRequestHeaders.Accept.Add(
+            //    new MediaTypeWithQualityHeaderValue("application/json"));
+            //var x = PutDeviceModel("api/devices/credentials");
+
+            //string macAddress = "";
+            //foreach (NetworkInterface nic in NetworkInterface.GetAllNetworkInterfaces())
+            //{
+            //    // Only consider Ethernet network interfaces, thereby ignoring any
+            //    // loopback devices etc.
+            //    if (nic.NetworkInterfaceType != NetworkInterfaceType.Ethernet) continue;
+            //    if (nic.OperationalStatus == OperationalStatus.Up)
+            //    {
+            //        macAddress = ByteArrayToString(nic.GetPhysicalAddress().GetAddressBytes());
+            //        break;
+            //    }
+            //}
+            //Console.WriteLine(macAddress);
+
+            // STEP 1: get mqtt credentials if not available
+            // STEP 2: connect to MQTT broker with this credential
+            // STEP 3: report device information by publish the topic : bms/<Device_ID>/info
+            // STEP 4: report device status by publish the topic : bms/<DEVICE_ID>/state
+            client = new HttpClient
+            {
+                BaseAddress = new Uri(API_ENDPOINT)
+            };
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
-            var x = PutDeviceModel("api/devices/credentials");
 
-            string macAddress = "";
-            foreach (NetworkInterface nic in NetworkInterface.GetAllNetworkInterfaces())
+            var device = new DeviceModel
             {
-                // Only consider Ethernet network interfaces, thereby ignoring any
-                // loopback devices etc.
-                if (nic.NetworkInterfaceType != NetworkInterfaceType.Ethernet) continue;
-                if (nic.OperationalStatus == OperationalStatus.Up)
-                {
-                    macAddress = ByteArrayToString(nic.GetPhysicalAddress().GetAddressBytes());
-                    break;
-                }
-            }
-            Console.WriteLine(macAddress);
+                macAddress = "9d:38:56:bd:f9:47",
+                uuid = "c88262bf-2a9a-46b9-8b21-7c6b0c0c49f5"
+            };
+            mQTTCredential = await GetMQTTCredentials(device);
+            Console.WriteLine(mQTTCredential);
+            Console.ReadLine();
         }
         public class DeviceModel
         {
             public string macAddress { get; set; }
             public string uuid { get; set; }
+        }
+        /*
+         {
+            "endpoint": "34.87.20.124",
+            "port": 1883,
+            "protocol": "mqtt",
+            "password": "7qLp7Tzp8XORNOe",
+            "token": "7qLp7Tzp8XORNOe",
+            "username": "c88262bf-2a9a-46b9-8b21-7c6b0c0c49f5",
+            "clientId": "c88262bf-2a9a-46b9-8b21-7c6b0c0c49f5"
+        }
+         */
+        public class MQTTCredential
+        {
+            public string endpoint { get; set; }
+            public int port { get; set; }
+            public string protocol { get; set; }
+            public string password { get; set; }
+            public string token { get; set; }
+            public string username { get; set; }
+            public string clientId { get; set; }
         }
         static async Task<DeviceModel> PutDeviceModel(string path)
         {
@@ -47,19 +91,35 @@ namespace ConsoleApp1
                 uuid = "c88262bf-2a9a-46b9-8b21-7c6b0c0c49f5"
             };
             var bodyTest = JsonConvert.SerializeObject(deviceTest);
-            HttpResponseMessage response = await client.PutAsJsonAsync(
-                path, bodyTest);
-            response.EnsureSuccessStatusCode();
+            HttpContent content = new StringContent(bodyTest, Encoding.UTF8, "application/json");
+            var x = client.PostAsync("http://34.87.20.124/api/devices/credentials", content);
 
             DeviceModel device = null;
             HttpResponseMessage getResponse = await client.GetAsync(path);
-            if (response.IsSuccessStatusCode)
+            if (getResponse.IsSuccessStatusCode)
             {
-                device = await getResponse.Content.ReadAsAsync<DeviceModel>();
+                var result = await getResponse.Content.ReadAsAsync<MQTTCredential>();
             }
             return device;
         }
-       
+
+        public static async Task<MQTTCredential> GetMQTTCredentials(DeviceModel device)
+        {
+            if (device == null)
+            {
+                return null;
+            }
+            var body = JsonConvert.SerializeObject(device);
+            HttpContent content = new StringContent(body, Encoding.UTF8, "application/json");
+            var response = await client.PutAsync("api/devices/credentials", content);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var result = await response.Content.ReadAsAsync<MQTTCredential>();
+                return result;
+            }
+            return null;
+        }
 
         public static string ByteArrayToString(byte[] ba)
         {
