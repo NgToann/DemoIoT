@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Net.Http;
 using MQTTnet;
 using MQTTnet.Client;
 using MQTTnet.Client.Options;
@@ -23,6 +24,8 @@ using Windows.UI.Core;
 using MQTTnet.Extensions.ManagedClient;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Text;
+using Newtonsoft.Json;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -38,10 +41,14 @@ namespace App1
 
     public sealed partial class MainPage : Page
     {
+        static MQTTCredential mQTTCredential;
+        static DeviceModel deviceDefault;
+        static string API_ENDPOINT = "http://34.87.20.124";
+
         public MqttFactory factory;
         public IMqttClient mqttClient;
         DispatcherTimer timerReSend;
-        static HttpClient client = new HttpClient();
+        static HttpClient client;
         //public MqttClientOptions options;
         //public IManagedMqttClient mqttClient = new MqttFactory().CreateManagedMqttClient();
         public MainPage()
@@ -49,6 +56,21 @@ namespace App1
             this.InitializeComponent();
             factory = new MqttFactory();
             mqttClient = factory.CreateMqttClient();
+
+            client = new HttpClient
+            {
+                BaseAddress = new Uri(API_ENDPOINT)
+            };
+            client.DefaultRequestHeaders.Accept.Clear();
+            client.DefaultRequestHeaders.Accept.Add(
+                new MediaTypeWithQualityHeaderValue("application/json"));
+
+            deviceDefault = new DeviceModel
+            {
+                macAddress = "9d:38:56:bd:f9:47",
+                uuid = "c88262bf-2a9a-46b9-8b21-7c6b0c0c49f5"
+            };
+
             //while (true)
             //{
             Debug.WriteLine("Start");
@@ -58,8 +80,10 @@ namespace App1
             Debug.WriteLine("Stop");
             //}
             timerReSend = new DispatcherTimer();
-            timerReSend.Interval = new TimeSpan(0, 0, 30);
+            timerReSend.Interval = new TimeSpan(0, 0, 10);
             timerReSend.Tick += TimerResend_Tick;
+
+            GetMQTTCredentials();
         }
         int sendingTimes = 0;
         private void TimerResend_Tick(object sender, object e)
@@ -76,13 +100,7 @@ namespace App1
             }
         }
 
-        public void getConfigInforClick(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         
-
         public void submitButtonClick(object sender, RoutedEventArgs e)
         {
             timerReSend.Start();
@@ -154,5 +172,78 @@ namespace App1
             await mqttClient.DisconnectAsync();
             return 1;
         }
+
+        //public static async Task<MQTTCredential> GetMQTTCredentials(DeviceModel device)
+        public static async Task<MQTTCredential> GetMQTTCredentials()
+        {
+            // 1 Check credential local is available or not.
+            var storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
+            var credentialLocalFile = await storageFolder.GetFileAsync("credentiallocal.json");
+            var contentFromFile = await Windows.Storage.FileIO.ReadTextAsync(credentialLocalFile);
+            if (!string.IsNullOrEmpty(contentFromFile))
+            {
+                mQTTCredential = JsonConvert.DeserializeObject<MQTTCredential>(contentFromFile);
+                return mQTTCredential;
+            }
+
+            // 2 if not availale. get from server, save data to storage
+
+            var body = JsonConvert.SerializeObject(deviceDefault);
+            HttpContent content = new StringContent(body, Encoding.UTF8, "application/json");
+            var response = await client.PutAsync("api/devices/credentials", content);
+
+            if (response.IsSuccessStatusCode)
+            {
+                //var result = await response.Content.ReadAsAsync<MQTTCredential>();
+                //return result;
+                var resultString = await response.Content.ReadAsStringAsync();
+                mQTTCredential = JsonConvert.DeserializeObject<MQTTCredential>(resultString);
+
+                // Create credentialJson file; replace if exists
+                //Windows.Storage.StorageFolder storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
+                //var x = Windows.Storage.ApplicationData.Current.LocalFolder.Path;
+
+                var storeCredential = await storageFolder.CreateFileAsync("credentiallocal.json", Windows.Storage.CreationCollisionOption.ReplaceExisting);
+                await Windows.Storage.FileIO.WriteTextAsync(storeCredential, JsonConvert.SerializeObject(mQTTCredential));
+
+                return mQTTCredential;
+            }
+            return null;
+        }
+
+        public static string ByteArrayToString(byte[] ba)
+        {
+            StringBuilder hex = new StringBuilder(ba.Length * 2);
+            for (int i = 0; i < ba.Length; i++)
+            {
+                hex.AppendFormat("{0:x2}", ba[i]);
+                if (i < ba.Length - 1)
+                    hex.Append(':');
+            }
+            return hex.ToString().ToUpper();
+        }
+
+        public class MQTTCredential
+        {
+            public string endpoint { get; set; }
+            public int port { get; set; }
+            public string protocol { get; set; }
+            public string password { get; set; }
+            public string token { get; set; }
+            public string username { get; set; }
+            public string clientId { get; set; }
+        }
+        public class DeviceModel
+        {
+            public string macAddress { get; set; }
+            public string uuid { get; set; }
+        }
+        
+        private void btnGetCredential_Click(object sender, RoutedEventArgs e)
+        {
+            if (mQTTCredential != null)
+                btnGetCredential.Content = JsonConvert.SerializeObject(mQTTCredential);
+        }
+        
     }
 }

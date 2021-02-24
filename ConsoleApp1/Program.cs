@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
+using System.IO;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Net.NetworkInformation;
@@ -54,7 +55,8 @@ namespace ConsoleApp1
                 uuid = "c88262bf-2a9a-46b9-8b21-7c6b0c0c49f5"
             };
             mQTTCredential = await GetMQTTCredentials(device);
-            Console.WriteLine(mQTTCredential);
+            Console.WriteLine(JsonConvert.SerializeObject(mQTTCredential));
+
             Console.ReadLine();
         }
         public class DeviceModel
@@ -115,8 +117,10 @@ namespace ConsoleApp1
 
             if (response.IsSuccessStatusCode)
             {
-                var result = await response.Content.ReadAsAsync<MQTTCredential>();
-                return result;
+                //var result = await response.Content.ReadAsAsync<MQTTCredential>();
+                var resultString = await response.Content.ReadAsStringAsync();
+                var result = JsonConvert.DeserializeObject<MQTTCredential>(resultString);
+                return result ;
             }
             return null;
         }

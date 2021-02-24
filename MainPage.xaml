@@ -19,6 +19,6 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Button Background="Green" Content="Button" Click="submitButtonClick" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <Button Grid.Row="1" Grid.Column="1" Background="Green" Content="Get ConfigInfo" Click="getConfigInforClick" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Button x:Name="btnGetCredential" Grid.Row="1" Grid.Column="1" Background="Green" Content="Get Credential From API" Click="btnGetCredential_Click" HorizontalAlignment="Center" VerticalAlignment="Center"/>
     </Grid>
 </Page>

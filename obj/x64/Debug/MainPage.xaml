@@ -18,7 +18,8 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Button x:ConnectionId='1' Background="Green" Content="Button"                          />
+        <Button x:ConnectionId='1' Background="Green" Content="Button"                           HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Button x:ConnectionId='2' x:Name="btnGetCredential" Grid.Row="1" Grid.Column="1" Background="Green" Content="Get Credential From API"                                HorizontalAlignment="Center" VerticalAlignment="Center"/>
     </Grid>
 </Page>
 

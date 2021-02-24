@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "sEy+LBdUOa4f5nXrCXs4cduix4NCjdNv01v6dm5vURDVxXBdFfliPWamonaDZz1YJha259Z6plGDxLwlxY39Fw==",
+  "dgSpecHash": "jxZ+fJkdr9d6IsIy9OegH4mfOg3VRpjRuT0TaYYztYWyPSe/GWj0OnCiZb9acU9g+d88SFeNRKq2dCmmp7xvWg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ToanNg\\Desktop\\BMS\\DemoIoT\\ConsoleApp1\\ConsoleApp1.csproj",
+  "projectFilePath": "C:\\Users\\PhucNguyen\\Desktop\\BMS_Outsource\\DemoIoT\\ConsoleApp1\\ConsoleApp1.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\ToanNg\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
-    "C:\\Users\\ToanNg\\.nuget\\packages\\system.net.http.formatting.extension\\5.2.3\\system.net.http.formatting.extension.5.2.3.nupkg.sha512"
+    "C:\\Users\\PhucNguyen\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\PhucNguyen\\.nuget\\packages\\system.net.http.formatting.extension\\5.2.3\\system.net.http.formatting.extension.5.2.3.nupkg.sha512"
   ],
   "logs": [
     {
