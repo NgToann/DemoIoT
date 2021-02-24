@@ -44,6 +44,7 @@ namespace App1
         static MQTTCredential mQTTCredential;
         static DeviceModel deviceDefault;
         static string API_ENDPOINT = "http://34.87.20.124";
+        private static string CREDENTIAL_FILENAME = "credentiallocal.json";
 
         public MqttFactory factory;
         public IMqttClient mqttClient;
@@ -54,8 +55,8 @@ namespace App1
         public MainPage()
         {
             this.InitializeComponent();
-            factory = new MqttFactory();
-            mqttClient = factory.CreateMqttClient();
+            //factory = new MqttFactory();
+            //mqttClient = factory.CreateMqttClient();
 
             client = new HttpClient
             {
@@ -65,25 +66,30 @@ namespace App1
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
 
+            //// should be change, when get actual macAddress and uuid
             deviceDefault = new DeviceModel
             {
                 macAddress = "9d:38:56:bd:f9:47",
                 uuid = "c88262bf-2a9a-46b9-8b21-7c6b0c0c49f5"
             };
 
-            //while (true)
-            //{
-            Debug.WriteLine("Start");
+            ////while (true)
+            ////{
+            //Debug.WriteLine("Start");
 
-            //MQTTSetup();
-          
-            Debug.WriteLine("Stop");
-            //}
-            timerReSend = new DispatcherTimer();
-            timerReSend.Interval = new TimeSpan(0, 0, 10);
-            timerReSend.Tick += TimerResend_Tick;
+            ////MQTTSetup();
 
-            GetMQTTCredentials();
+            //Debug.WriteLine("Stop");
+            ////}
+
+            //// timer loop
+            //timerReSend = new DispatcherTimer();
+            //timerReSend.Interval = new TimeSpan(0, 0, 10);
+            //timerReSend.Tick += TimerResend_Tick;
+
+            var x = new Handler();
+            x.MQTTHandler();
+            
         }
         int sendingTimes = 0;
         private void TimerResend_Tick(object sender, object e)
@@ -103,7 +109,8 @@ namespace App1
         
         public void submitButtonClick(object sender, RoutedEventArgs e)
         {
-            timerReSend.Start();
+            //timerReSend.Start();
+            MQTTSetup();
         }
         //public async Task mqttpush()
         //{
@@ -139,17 +146,30 @@ namespace App1
 
         public async Task<int> MQTTSetup()
         {
+            await GetMQTTCredentials();
+
             var message = new MqttApplicationMessageBuilder()
                                      .WithTopic("testtopic/mot")
                                      .WithPayload("Hello HiveMQ !")
                                      .WithAtLeastOnceQoS()
                                      .Build();
 
+            //var options = new MqttClientOptionsBuilder()
+            //                        //.WithTcpServer("test.mosquitto.org", 1883)
+            //                        .WithTcpServer("broker.hivemq.com", 1883)
+            //                        //.WithClientId("tranlysfw")
+            //                        .WithCredentials("tranlysfw", "zxcvbnm1")
+            //                        //.WithTls()
+            //                        .WithCleanSession(false)
+            //                        //.WithKeepAlivePeriod(System.TimeSpan.FromSeconds(3))
+            //                        //.WithProtocolVersion(MQTTnet.Formatter.MqttProtocolVersion.V311)
+            //                        .Build();
+
             var options = new MqttClientOptionsBuilder()
                                     //.WithTcpServer("test.mosquitto.org", 1883)
-                                    .WithTcpServer("broker.hivemq.com", 1883)
-                                    //.WithClientId("tranlysfw")
-                                    .WithCredentials("tranlysfw", "zxcvbnm1")
+                                    .WithTcpServer("34.87.20.124", mQTTCredential.port)
+                                    .WithClientId(mQTTCredential.clientId)
+                                    .WithCredentials(mQTTCredential.username, mQTTCredential.password)
                                     //.WithTls()
                                     .WithCleanSession(false)
                                     //.WithKeepAlivePeriod(System.TimeSpan.FromSeconds(3))
@@ -178,16 +198,19 @@ namespace App1
         {
             // 1 Check credential local is available or not.
             var storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
-            var credentialLocalFile = await storageFolder.GetFileAsync("credentiallocal.json");
-            var contentFromFile = await Windows.Storage.FileIO.ReadTextAsync(credentialLocalFile);
-            if (!string.IsNullOrEmpty(contentFromFile))
+            var checkFileExist = await storageFolder.TryGetItemAsync(CREDENTIAL_FILENAME);
+            if (checkFileExist != null)
             {
-                mQTTCredential = JsonConvert.DeserializeObject<MQTTCredential>(contentFromFile);
-                return mQTTCredential;
+                var credentialLocalFile = await storageFolder.GetFileAsync(CREDENTIAL_FILENAME);
+                var contentFromFile = await Windows.Storage.FileIO.ReadTextAsync(credentialLocalFile);
+                if (!string.IsNullOrEmpty(contentFromFile))
+                {
+                    mQTTCredential = JsonConvert.DeserializeObject<MQTTCredential>(contentFromFile);
+                    return mQTTCredential;
+                }
             }
 
             // 2 if not availale. get from server, save data to storage
-
             var body = JsonConvert.SerializeObject(deviceDefault);
             HttpContent content = new StringContent(body, Encoding.UTF8, "application/json");
             var response = await client.PutAsync("api/devices/credentials", content);
@@ -202,8 +225,9 @@ namespace App1
                 // Create credentialJson file; replace if exists
                 //Windows.Storage.StorageFolder storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
                 //var x = Windows.Storage.ApplicationData.Current.LocalFolder.Path;
+                //var t = await storageFolder.GetFileAsync("credentiallocal.json");
 
-                var storeCredential = await storageFolder.CreateFileAsync("credentiallocal.json", Windows.Storage.CreationCollisionOption.ReplaceExisting);
+                var storeCredential = await storageFolder.CreateFileAsync(CREDENTIAL_FILENAME, Windows.Storage.CreationCollisionOption.ReplaceExisting);
                 await Windows.Storage.FileIO.WriteTextAsync(storeCredential, JsonConvert.SerializeObject(mQTTCredential));
 
                 return mQTTCredential;

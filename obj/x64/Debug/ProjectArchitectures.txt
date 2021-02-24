@@ -1,1 +1,1 @@
-C:\Users\PhucNguyen\Desktop\BMS_Outsource\DemoIoT\App1.csproj;x64
+C:\Users\ToanNg\Desktop\BMS\DemoIoT\App1.csproj;x64

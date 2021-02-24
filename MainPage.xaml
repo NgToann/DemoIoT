@@ -18,7 +18,7 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Button Background="Green" Content="Button" Click="submitButtonClick" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <Button x:Name="btnGetCredential" Grid.Row="1" Grid.Column="1" Background="Green" Content="Get Credential From API" Click="btnGetCredential_Click" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Button Background="Green" Content="Connect to broker" Click="submitButtonClick" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Button x:Name="btnGetCredential" Grid.Row="0" Grid.Column="1" Background="Green" Content="Get Credential From API" Click="btnGetCredential_Click" HorizontalAlignment="Center" VerticalAlignment="Center"/>
     </Grid>
 </Page>
