@@ -1,11 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "sEy+LBdUOa4f5nXrCXs4cduix4NCjdNv01v6dm5vURDVxXBdFfliPWamonaDZz1YJha259Z6plGDxLwlxY39Fw==",
+  "dgSpecHash": "VHZr0b//w6IC55Tnih4H9Ew/C5ZntonzRtwfyGaEbgnxXWveut24D+geCnGl2fJj0BgHn+rHVE14k2mZUL5nRQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\ToanNg\\Desktop\\BMS\\DemoIoT\\ConsoleApp1\\ConsoleApp1.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\ToanNg\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "C:\\Users\\ToanNg\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\ToanNg\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
-    "C:\\Users\\ToanNg\\.nuget\\packages\\system.net.http.formatting.extension\\5.2.3\\system.net.http.formatting.extension.5.2.3.nupkg.sha512"
+    "C:\\Users\\ToanNg\\.nuget\\packages\\system.codedom\\5.0.0\\system.codedom.5.0.0.nupkg.sha512",
+    "C:\\Users\\ToanNg\\.nuget\\packages\\system.management\\5.0.0\\system.management.5.0.0.nupkg.sha512",
+    "C:\\Users\\ToanNg\\.nuget\\packages\\system.net.http.formatting.extension\\5.2.3\\system.net.http.formatting.extension.5.2.3.nupkg.sha512",
+    "C:\\Users\\ToanNg\\.nuget\\packages\\system.security.accesscontrol\\5.0.0\\system.security.accesscontrol.5.0.0.nupkg.sha512",
+    "C:\\Users\\ToanNg\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512"
   ],
   "logs": [
     {

@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\ToanNg\Desktop\BMS\DemoIoT\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-02-24T16:09:06.581</Modified>
+      <Modified>2021-02-25T17:00:10.434</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\ToanNg\Desktop\BMS\DemoIoT\bin\x64\Debug\App1.exe">
       <PackagePath>entrypoint\App1.exe</PackagePath>
-      <Modified>2021-02-24T16:09:05.927</Modified>
+      <Modified>2021-02-25T17:00:09.744</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\microsoft.csharp\4.3.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -582,11 +582,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ToanNg\Desktop\BMS\DemoIoT\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2021-02-24T13:10:15.470</Modified>
+      <Modified>2021-02-25T15:11:15.706</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ToanNg\Desktop\BMS\DemoIoT\bin\x64\Debug\Core\App1.exe">
       <PackagePath>App1.exe</PackagePath>
-      <Modified>2021-02-24T16:09:06.566</Modified>
+      <Modified>2021-02-25T17:00:10.421</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

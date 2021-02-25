@@ -52,3 +52,13 @@ C:\Users\PhucNguyen\Desktop\BMS_Outsource\DemoIoT\ConsoleApp1\obj\Debug\netcorea
 C:\Users\PhucNguyen\Desktop\BMS_Outsource\DemoIoT\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.dll
 C:\Users\PhucNguyen\Desktop\BMS_Outsource\DemoIoT\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.pdb
 C:\Users\PhucNguyen\Desktop\BMS_Outsource\DemoIoT\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.genruntimeconfig.cache
+C:\Users\ToanNg\Desktop\BMS\DemoIoT\ConsoleApp1\bin\Debug\netcoreapp3.1\Microsoft.Win32.Registry.dll
+C:\Users\ToanNg\Desktop\BMS\DemoIoT\ConsoleApp1\bin\Debug\netcoreapp3.1\System.CodeDom.dll
+C:\Users\ToanNg\Desktop\BMS\DemoIoT\ConsoleApp1\bin\Debug\netcoreapp3.1\System.Management.dll
+C:\Users\ToanNg\Desktop\BMS\DemoIoT\ConsoleApp1\bin\Debug\netcoreapp3.1\System.Security.AccessControl.dll
+C:\Users\ToanNg\Desktop\BMS\DemoIoT\ConsoleApp1\bin\Debug\netcoreapp3.1\System.Security.Principal.Windows.dll
+C:\Users\ToanNg\Desktop\BMS\DemoIoT\ConsoleApp1\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\Microsoft.Win32.Registry.dll
+C:\Users\ToanNg\Desktop\BMS\DemoIoT\ConsoleApp1\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Management.dll
+C:\Users\ToanNg\Desktop\BMS\DemoIoT\ConsoleApp1\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Security.AccessControl.dll
+C:\Users\ToanNg\Desktop\BMS\DemoIoT\ConsoleApp1\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+C:\Users\ToanNg\Desktop\BMS\DemoIoT\ConsoleApp1\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll

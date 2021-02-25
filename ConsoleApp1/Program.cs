@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.IO;
+using System.Management;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Net.NetworkInformation;
@@ -54,11 +55,43 @@ namespace ConsoleApp1
                 macAddress = "9d:38:56:bd:f9:47",
                 uuid = "c88262bf-2a9a-46b9-8b21-7c6b0c0c49f5"
             };
+
+
+            //var mbs = new ManagementObjectSearcher("Select ProcessorId From Win32_processor");
+            //ManagementObjectCollection mbsList = mbs.Get();
+            //string id = "";
+            //foreach (ManagementObject mo in mbsList)
+            //{
+            //    id = mo["ProcessorId"].ToString();
+            //    break;
+            //}
+
+
+
+
             mQTTCredential = await GetMQTTCredentials(device);
             Console.WriteLine(JsonConvert.SerializeObject(mQTTCredential));
 
             Console.ReadLine();
         }
+
+        private static string GetId()
+        {
+            if (Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.System.Profile.HardwareIdentification"))
+            {
+                var token = HardwareIdentification.GetPackageSpecificToken(null);
+                var hardwareId = token.Id;
+                var dataReader = Windows.Storage.Streams.DataReader.FromBuffer(hardwareId);
+
+                byte[] bytes = new byte[hardwareId.Length];
+                dataReader.ReadBytes(bytes);
+
+                return BitConverter.ToString(bytes).Replace("-", "");
+            }
+
+            throw new Exception("NO API FOR DEVICE ID PRESENT!");
+        }
+
         public class DeviceModel
         {
             public string macAddress { get; set; }

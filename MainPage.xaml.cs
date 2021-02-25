@@ -26,6 +26,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using Newtonsoft.Json;
+using Windows.System.Profile;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -71,8 +72,8 @@ namespace App1
             {
                 macAddress = "9d:38:56:bd:f9:47",
                 uuid = "c88262bf-2a9a-46b9-8b21-7c6b0c0c49f5"
+                
             };
-
             ////while (true)
             ////{
             //Debug.WriteLine("Start");
@@ -87,10 +88,50 @@ namespace App1
             //timerReSend.Interval = new TimeSpan(0, 0, 10);
             //timerReSend.Tick += TimerResend_Tick;
 
-            var x = new Handler();
-            x.MQTTHandler();
-            
+            var y = GetHardwareId();
+            var x = GetId();
+            //var x = new Handler();
+            //x.MQTTHandler();
+
         }
+
+        private string GetHardwareId()
+        {
+            var token = HardwareIdentification.GetPackageSpecificToken(null);
+            var hardwareId = token.Id;
+            var dataReader = Windows.Storage.Streams.DataReader.FromBuffer(hardwareId);
+
+            byte[] bytes = new byte[hardwareId.Length];
+            dataReader.ReadBytes(bytes);
+
+            return BitConverter.ToString(bytes);
+        }
+        private static string GetId()
+        {
+            if (Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.System.Profile.HardwareIdentification"))
+            {
+                var token = HardwareIdentification.GetPackageSpecificToken(null);
+                var hardwareId = token.Id;
+                var dataReader = Windows.Storage.Streams.DataReader.FromBuffer(hardwareId);
+
+                byte[] bytes = new byte[hardwareId.Length];
+                dataReader.ReadBytes(bytes);
+
+                var uuidStr = ByteArrayToString_1(bytes);
+                var uuid = new Guid(bytes).ToString();
+
+                return uuid;
+            }
+            else return "";
+            //var token = HardwareIdentification.GetPackageSpecificToken(null);
+            //using (DataReader reader = DataReader.FromBuffer(token.Id))
+            //{
+            //    byte[] bytes = new byte[token.Id.Length];
+            //    reader.ReadBytes(bytes);
+            //    string uniqueCode = Encoding.ASCII.GetString(bytes);
+            //}
+        }
+
         int sendingTimes = 0;
         private void TimerResend_Tick(object sender, object e)
         {
@@ -154,27 +195,27 @@ namespace App1
                                      .WithAtLeastOnceQoS()
                                      .Build();
 
-            //var options = new MqttClientOptionsBuilder()
-            //                        //.WithTcpServer("test.mosquitto.org", 1883)
-            //                        .WithTcpServer("broker.hivemq.com", 1883)
-            //                        //.WithClientId("tranlysfw")
-            //                        .WithCredentials("tranlysfw", "zxcvbnm1")
-            //                        //.WithTls()
-            //                        .WithCleanSession(false)
-            //                        //.WithKeepAlivePeriod(System.TimeSpan.FromSeconds(3))
-            //                        //.WithProtocolVersion(MQTTnet.Formatter.MqttProtocolVersion.V311)
-            //                        .Build();
-
             var options = new MqttClientOptionsBuilder()
                                     //.WithTcpServer("test.mosquitto.org", 1883)
-                                    .WithTcpServer("34.87.20.124", mQTTCredential.port)
-                                    .WithClientId(mQTTCredential.clientId)
-                                    .WithCredentials(mQTTCredential.username, mQTTCredential.password)
+                                    .WithTcpServer("broker.hivemq.com", 1883)
+                                    //.WithClientId("tranlysfw")
+                                    .WithCredentials("tranlysfw", "zxcvbnm1")
                                     //.WithTls()
                                     .WithCleanSession(false)
                                     //.WithKeepAlivePeriod(System.TimeSpan.FromSeconds(3))
                                     //.WithProtocolVersion(MQTTnet.Formatter.MqttProtocolVersion.V311)
                                     .Build();
+
+            //var options = new MqttClientOptionsBuilder()
+            //                        //.WithTcpServer("test.mosquitto.org", 1883)
+            //                        .WithTcpServer("34.87.20.124", mQTTCredential.port)
+            //                        .WithClientId(mQTTCredential.clientId)
+            //                        .WithCredentials(mQTTCredential.username, mQTTCredential.password)
+            //                        //.WithTls()
+            //                        .WithCleanSession(false)
+            //                        //.WithKeepAlivePeriod(System.TimeSpan.FromSeconds(3))
+            //                        //.WithProtocolVersion(MQTTnet.Formatter.MqttProtocolVersion.V311)
+            //                        .Build();
 
             await mqttClient.ConnectAsync(options, CancellationToken.None);
 
@@ -243,6 +284,16 @@ namespace App1
                 hex.AppendFormat("{0:x2}", ba[i]);
                 if (i < ba.Length - 1)
                     hex.Append(':');
+            }
+            return hex.ToString().ToUpper();
+        }
+
+        public static string ByteArrayToString_1(byte[] ba)
+        {
+            StringBuilder hex = new StringBuilder(ba.Length * 2);
+            for (int i = 0; i < ba.Length; i++)
+            {
+                hex.AppendFormat("{0:x2}", ba[i]);
             }
             return hex.ToString().ToUpper();
         }

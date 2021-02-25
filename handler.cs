@@ -12,6 +12,8 @@ using MQTTnet.Client.Options;
 using MQTTnet;
 using System.Threading;
 using MQTTnet.Client;
+using System.Net.NetworkInformation;
+using Windows.System.Profile;
 
 namespace App1
 {
@@ -27,14 +29,21 @@ namespace App1
 
 
         // TODO: get macAddress and uuid from hardware
-        string macAddress = "9d:38:56:bd:f9:47";
+        //string macAddress = "9d:38:56:bd:f9:47";
         string uuid = "c88262bf-2a9a-46b9-8b21-7c6b0c0c49f5";
 
         public async Task MQTTHandler()
         {
             try
             {
-                // 1. Get Device Credentials from flask disk
+                // get macAddress
+                var macAddress = await GetMacAddressDevice();
+                if (macAddress == null)
+                {
+                    throw new Exception("Can not get macAddress device");
+                }
+
+                // 1. Get Device Credentials from flash disk
                 var mqttCredential = await GetCredentials();
                 //   1.1. Call Api to get MQTT credentials if no credentials found
                 if (mqttCredential == null)
@@ -50,7 +59,7 @@ namespace App1
                 {
                     throw new Exception("Can not get MQTT credential");
                 }
-                //   1.2. Store credential to flask disk
+                //   1.2. Store credential to flash disk
                 await SetCredentials(mqttCredential);
                 // 2. Connect to MQTT broker
                 var options = new MqttClientOptionsBuilder()
@@ -65,9 +74,13 @@ namespace App1
                 }
                 await mqttClient.ConnectAsync(options, CancellationToken.None);
                 // 3. Get Device Information
+
                 // 4. Report Device information
+
                 // 5. Get device status
+
                 // 6. Report Device status
+
             }
             catch (Exception ex)
             {
@@ -124,5 +137,57 @@ namespace App1
             var storeCredential = await folder.CreateFileAsync(CREDENTIAL_FILE, Windows.Storage.CreationCollisionOption.ReplaceExisting);
             await Windows.Storage.FileIO.WriteTextAsync(storeCredential, JsonConvert.SerializeObject(mqttCredential));
         }
+
+        public async Task<string> GetMacAddressDevice()
+        {
+            string result = null;
+            foreach (NetworkInterface nic in NetworkInterface.GetAllNetworkInterfaces())
+            {
+                // Only consider Ethernet network interfaces, thereby ignoring any
+                // loopback devices etc.
+                if (nic.NetworkInterfaceType != NetworkInterfaceType.Ethernet) continue;
+                if (nic.OperationalStatus == OperationalStatus.Up)
+                {
+                    result = ByteArrayToString(nic.GetPhysicalAddress().GetAddressBytes());
+                    break;
+                }
+            }
+            return result;
+        }
+        public static string ByteArrayToString(byte[] ba)
+        {
+            StringBuilder hex = new StringBuilder(ba.Length * 2);
+            for (int i = 0; i < ba.Length; i++)
+            {
+                hex.AppendFormat("{0:x2}", ba[i]);
+                if (i < ba.Length - 1)
+                    hex.Append(':');
+            }
+            return hex.ToString();
+        }
+
+
+        private static string GetUUID()
+        {
+            if (Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.System.Profile.HardwareIdentification"))
+            {
+                var token = HardwareIdentification.GetPackageSpecificToken(null);
+                var hardwareId = token.Id;
+                var dataReader = Windows.Storage.Streams.DataReader.FromBuffer(hardwareId);
+
+                byte[] bytes = new byte[hardwareId.Length];
+                dataReader.ReadBytes(bytes);
+
+
+                Guid g = default(Guid);
+                bool success = Guid.TryParse(BitConverter.ToString(bytes), out g);
+
+                return BitConverter.ToString(bytes);
+
+            }
+            else
+                return string.Empty;           
+        }
+
     }
 }
