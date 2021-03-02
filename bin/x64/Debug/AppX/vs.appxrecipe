@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>TOANNG</Machine>
-    <WindowsUser>ToanNg</WindowsUser>
+    <Machine>PHUCNGUYEN</Machine>
+    <WindowsUser>PhucNguyen</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
@@ -10,7 +10,7 @@
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>089fb926-6c9c-4ebb-8db5-01c966f158e2</PackageIdentityName>
     <PackageIdentityPublisher>CN=Admin</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\ToanNg\Desktop\BMS\DemoIoT\obj\x64\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\PhucNguyen\Desktop\BMS_Outsource\RunningTask\DemoIoT\obj\x64\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,8 +18,8 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\ToanNg\Desktop\BMS\DemoIoT\bin\x64\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>9B1162D91AFFDF2A1A98D90E8FF0D3BF2DDA5B14D6D24DF2D36B16579D0BC42C</RegisteredManifestChecksum>
+    <LayoutDir>C:\Users\PhucNguyen\Desktop\BMS_Outsource\RunningTask\DemoIoT\bin\x64\Debug\AppX</LayoutDir>
+    <RegisteredManifestChecksum>88512F9CEFB9772606E83DFF89EBB998EFECC06B1C8EC93E15001810A9B60C3A</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>089fb926-6c9c-4ebb-8db5-01c966f158e2_1.0.0.0_x64__5gyrq6psz227t</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>089fb926-6c9c-4ebb-8db5-01c966f158e2_5gyrq6psz227t!App</RegisteredUserModeAppID>
     <RegisteredPackageID>089fb926-6c9c-4ebb-8db5-01c966f158e2</RegisteredPackageID>
@@ -27,18 +27,18 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\ToanNg\Desktop\BMS\DemoIoT\bin\x64\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\PhucNguyen\Desktop\BMS_Outsource\RunningTask\DemoIoT\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-02-25T17:00:10.434</Modified>
+      <Modified>2021-02-26T04:21:36.094</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\ToanNg\Desktop\BMS\DemoIoT\bin\x64\Debug\App1.exe">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\Desktop\BMS_Outsource\RunningTask\DemoIoT\bin\x64\Debug\App1.exe">
       <PackagePath>entrypoint\App1.exe</PackagePath>
-      <Modified>2021-02-25T17:00:09.744</Modified>
+      <Modified>2021-02-26T04:21:15.184</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\microsoft.csharp\4.3.0\lib\netcore50\Microsoft.CSharp.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\microsoft.csharp\4.3.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
       <Modified>2016-11-04T21:55:34.000</Modified>
     </AppxPackagedFile>
@@ -94,111 +94,111 @@
       <PackagePath>Microsoft.VisualBasic.dll</PackagePath>
       <Modified>2016-06-11T15:13:10.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\mqttnet\3.0.14\lib\uap10.0\MQTTnet.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\mqttnet\3.0.14\lib\uap10.0\MQTTnet.dll">
       <PackagePath>MQTTnet.dll</PackagePath>
       <Modified>2021-02-02T12:27:28.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\mqttnet.extensions.managedclient\3.0.14\lib\uap10.0\MQTTnet.Extensions.ManagedClient.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\mqttnet.extensions.managedclient\3.0.14\lib\uap10.0\MQTTnet.Extensions.ManagedClient.dll">
       <PackagePath>MQTTnet.Extensions.ManagedClient.dll</PackagePath>
       <Modified>2021-02-02T12:27:46.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\newtonsoft.json\12.0.3\lib\netstandard1.3\Newtonsoft.Json.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\newtonsoft.json\12.0.3\lib\netstandard1.3\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
       <Modified>2019-11-08T17:56:44.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\runtime.any.system.collections\4.3.0\lib\netcore50\System.Collections.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\runtime.any.system.collections\4.3.0\lib\netcore50\System.Collections.dll">
       <PackagePath>System.Collections.dll</PackagePath>
       <Modified>2016-11-04T21:55:36.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\runtime.any.system.diagnostics.tools\4.3.0\lib\netcore50\System.Diagnostics.Tools.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\runtime.any.system.diagnostics.tools\4.3.0\lib\netcore50\System.Diagnostics.Tools.dll">
       <PackagePath>System.Diagnostics.Tools.dll</PackagePath>
       <Modified>2016-11-04T21:55:54.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\runtime.any.system.diagnostics.tracing\4.3.0\lib\netcore50\System.Diagnostics.Tracing.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\runtime.any.system.diagnostics.tracing\4.3.0\lib\netcore50\System.Diagnostics.Tracing.dll">
       <PackagePath>System.Diagnostics.Tracing.dll</PackagePath>
       <Modified>2016-11-04T21:55:56.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\runtime.any.system.globalization\4.3.0\lib\netcore50\System.Globalization.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\runtime.any.system.globalization\4.3.0\lib\netcore50\System.Globalization.dll">
       <PackagePath>System.Globalization.dll</PackagePath>
       <Modified>2016-11-04T21:56:02.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\runtime.any.system.globalization.calendars\4.3.0\lib\netcore50\System.Globalization.Calendars.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\runtime.any.system.globalization.calendars\4.3.0\lib\netcore50\System.Globalization.Calendars.dll">
       <PackagePath>System.Globalization.Calendars.dll</PackagePath>
       <Modified>2016-11-04T21:55:58.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\runtime.any.system.io\4.3.0\lib\netcore50\System.IO.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\runtime.any.system.io\4.3.0\lib\netcore50\System.IO.dll">
       <PackagePath>System.IO.dll</PackagePath>
       <Modified>2016-11-04T21:56:14.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\runtime.any.system.reflection\4.3.0\lib\netcore50\System.Reflection.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\runtime.any.system.reflection\4.3.0\lib\netcore50\System.Reflection.dll">
       <PackagePath>System.Reflection.dll</PackagePath>
       <Modified>2016-11-04T21:56:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\runtime.any.system.reflection.extensions\4.3.0\lib\netcore50\System.Reflection.Extensions.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\runtime.any.system.reflection.extensions\4.3.0\lib\netcore50\System.Reflection.Extensions.dll">
       <PackagePath>System.Reflection.Extensions.dll</PackagePath>
       <Modified>2016-11-04T21:56:40.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\runtime.any.system.reflection.primitives\4.3.0\lib\netcore50\System.Reflection.Primitives.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\runtime.any.system.reflection.primitives\4.3.0\lib\netcore50\System.Reflection.Primitives.dll">
       <PackagePath>System.Reflection.Primitives.dll</PackagePath>
       <Modified>2016-11-04T21:56:44.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\runtime.any.system.resources.resourcemanager\4.3.0\lib\netcore50\System.Resources.ResourceManager.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\runtime.any.system.resources.resourcemanager\4.3.0\lib\netcore50\System.Resources.ResourceManager.dll">
       <PackagePath>System.Resources.ResourceManager.dll</PackagePath>
       <Modified>2016-11-04T21:56:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\runtime.any.system.runtime\4.3.0\lib\netcore50\System.Runtime.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\runtime.any.system.runtime\4.3.0\lib\netcore50\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
       <Modified>2016-11-04T21:57:02.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\runtime.any.system.runtime.handles\4.3.0\lib\netstandard1.3\System.Runtime.Handles.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\runtime.any.system.runtime.handles\4.3.0\lib\netstandard1.3\System.Runtime.Handles.dll">
       <PackagePath>System.Runtime.Handles.dll</PackagePath>
       <Modified>2016-11-04T21:56:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\runtime.any.system.runtime.interopservices\4.3.0\lib\netcore50\System.Runtime.InteropServices.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\runtime.any.system.runtime.interopservices\4.3.0\lib\netcore50\System.Runtime.InteropServices.dll">
       <PackagePath>System.Runtime.InteropServices.dll</PackagePath>
       <Modified>2016-11-04T21:56:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\runtime.any.system.text.encoding\4.3.0\lib\netcore50\System.Text.Encoding.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\runtime.any.system.text.encoding\4.3.0\lib\netcore50\System.Text.Encoding.dll">
       <PackagePath>System.Text.Encoding.dll</PackagePath>
       <Modified>2016-11-04T21:57:22.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\runtime.any.system.text.encoding.extensions\4.3.0\lib\netcore50\System.Text.Encoding.Extensions.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\runtime.any.system.text.encoding.extensions\4.3.0\lib\netcore50\System.Text.Encoding.Extensions.dll">
       <PackagePath>System.Text.Encoding.Extensions.dll</PackagePath>
       <Modified>2016-11-04T21:57:16.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\runtime.any.system.threading.tasks\4.3.0\lib\netcore50\System.Threading.Tasks.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\runtime.any.system.threading.tasks\4.3.0\lib\netcore50\System.Threading.Tasks.dll">
       <PackagePath>System.Threading.Tasks.dll</PackagePath>
       <Modified>2016-11-04T21:57:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\runtime.any.system.threading.timer\4.3.0\lib\netcore50\System.Threading.Timer.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\runtime.any.system.threading.timer\4.3.0\lib\netcore50\System.Threading.Timer.dll">
       <PackagePath>System.Threading.Timer.dll</PackagePath>
       <Modified>2016-11-04T21:57:30.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\runtime.win.microsoft.win32.primitives\4.3.0\runtimes\win\lib\netstandard1.3\Microsoft.Win32.Primitives.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\runtime.win.microsoft.win32.primitives\4.3.0\runtimes\win\lib\netstandard1.3\Microsoft.Win32.Primitives.dll">
       <PackagePath>Microsoft.Win32.Primitives.dll</PackagePath>
       <Modified>2016-11-04T21:55:32.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\runtime.win.system.console\4.3.1\runtimes\win\lib\netcore50\System.Console.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\runtime.win.system.console\4.3.1\runtimes\win\lib\netcore50\System.Console.dll">
       <PackagePath>System.Console.dll</PackagePath>
       <Modified>2018-03-28T10:46:06.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\runtime.win.system.diagnostics.debug\4.3.0\runtimes\win\lib\netcore50\System.Diagnostics.Debug.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\runtime.win.system.diagnostics.debug\4.3.0\runtimes\win\lib\netcore50\System.Diagnostics.Debug.dll">
       <PackagePath>System.Diagnostics.Debug.dll</PackagePath>
       <Modified>2016-11-04T21:55:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\runtime.win.system.io.filesystem\4.3.0\runtimes\win\lib\netcore50\System.IO.FileSystem.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\runtime.win.system.io.filesystem\4.3.0\runtimes\win\lib\netcore50\System.IO.FileSystem.dll">
       <PackagePath>System.IO.FileSystem.dll</PackagePath>
       <Modified>2016-11-04T21:56:06.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\runtime.win.system.net.primitives\4.3.0\runtimes\win\lib\netcore50\System.Net.Primitives.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\runtime.win.system.net.primitives\4.3.0\runtimes\win\lib\netcore50\System.Net.Primitives.dll">
       <PackagePath>System.Net.Primitives.dll</PackagePath>
       <Modified>2016-11-04T21:56:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\runtime.win.system.net.sockets\4.3.0\runtimes\win\lib\netcore50\System.Net.Sockets.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\runtime.win.system.net.sockets\4.3.0\runtimes\win\lib\netcore50\System.Net.Sockets.dll">
       <PackagePath>System.Net.Sockets.dll</PackagePath>
       <Modified>2016-11-04T21:56:28.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\runtime.win.system.runtime.extensions\4.3.0\runtimes\win\lib\netcore50\System.Runtime.Extensions.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\runtime.win.system.runtime.extensions\4.3.0\runtimes\win\lib\netcore50\System.Runtime.Extensions.dll">
       <PackagePath>System.Runtime.Extensions.dll</PackagePath>
       <Modified>2016-11-04T21:56:48.000</Modified>
     </AppxPackagedFile>
@@ -206,55 +206,55 @@
       <PackagePath>clrjit.dll</PackagePath>
       <Modified>2016-06-13T10:26:26.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\runtime.win7-x64.runtime.native.system.io.compression\4.3.2\runtimes\win7-x64\nativeassets\netcore50\clrcompression.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\runtime.win7-x64.runtime.native.system.io.compression\4.3.2\runtimes\win7-x64\nativeassets\netcore50\clrcompression.dll">
       <PackagePath>clrcompression.dll</PackagePath>
       <Modified>2018-06-22T01:21:46.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\runtime.win7.system.private.uri\4.3.0\runtimes\win\lib\netcore50\System.Private.Uri.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\runtime.win7.system.private.uri\4.3.0\runtimes\win\lib\netcore50\System.Private.Uri.dll">
       <PackagePath>System.Private.Uri.dll</PackagePath>
       <Modified>2016-11-04T21:56:36.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\system.appcontext\4.3.0\lib\netcore50\System.AppContext.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\system.appcontext\4.3.0\lib\netcore50\System.AppContext.dll">
       <PackagePath>System.AppContext.dll</PackagePath>
       <Modified>2016-11-04T21:55:34.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\system.buffers\4.3.0\lib\netstandard1.1\System.Buffers.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\system.buffers\4.3.0\lib\netstandard1.1\System.Buffers.dll">
       <PackagePath>System.Buffers.dll</PackagePath>
       <Modified>2016-11-04T21:55:30.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\system.collections.concurrent\4.3.0\lib\netcore50\System.Collections.Concurrent.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\system.collections.concurrent\4.3.0\lib\netcore50\System.Collections.Concurrent.dll">
       <PackagePath>System.Collections.Concurrent.dll</PackagePath>
       <Modified>2016-11-04T21:55:32.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\system.collections.immutable\1.2.0\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\system.collections.immutable\1.2.0\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll">
       <PackagePath>System.Collections.Immutable.dll</PackagePath>
-      <Modified>2016-06-11T15:13:16.000</Modified>
+      <Modified>2016-06-12T06:13:16.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\system.collections.nongeneric\4.0.1\lib\netstandard1.3\System.Collections.NonGeneric.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\system.collections.nongeneric\4.0.1\lib\netstandard1.3\System.Collections.NonGeneric.dll">
       <PackagePath>System.Collections.NonGeneric.dll</PackagePath>
-      <Modified>2016-06-11T15:13:22.000</Modified>
+      <Modified>2016-06-12T06:13:22.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\system.collections.specialized\4.0.1\lib\netstandard1.3\System.Collections.Specialized.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\system.collections.specialized\4.0.1\lib\netstandard1.3\System.Collections.Specialized.dll">
       <PackagePath>System.Collections.Specialized.dll</PackagePath>
-      <Modified>2016-06-11T15:13:22.000</Modified>
+      <Modified>2016-06-12T06:13:22.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\system.componentmodel\4.0.1\lib\netcore50\System.ComponentModel.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\system.componentmodel\4.0.1\lib\netcore50\System.ComponentModel.dll">
       <PackagePath>System.ComponentModel.dll</PackagePath>
-      <Modified>2016-06-11T15:13:24.000</Modified>
+      <Modified>2016-06-12T06:13:24.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\system.componentmodel.annotations\4.1.0\lib\netcore50\System.ComponentModel.Annotations.dll">
       <PackagePath>System.ComponentModel.Annotations.dll</PackagePath>
       <Modified>2016-06-11T15:13:22.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\system.componentmodel.eventbasedasync\4.0.11\lib\netcore50\System.ComponentModel.EventBasedAsync.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\system.componentmodel.eventbasedasync\4.0.11\lib\netcore50\System.ComponentModel.EventBasedAsync.dll">
       <PackagePath>System.ComponentModel.EventBasedAsync.dll</PackagePath>
-      <Modified>2016-06-11T15:13:20.000</Modified>
+      <Modified>2016-06-12T06:13:20.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\system.componentmodel.primitives\4.3.0\lib\netstandard1.0\System.ComponentModel.Primitives.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\system.componentmodel.primitives\4.3.0\lib\netstandard1.0\System.ComponentModel.Primitives.dll">
       <PackagePath>System.ComponentModel.Primitives.dll</PackagePath>
       <Modified>2016-11-04T21:55:40.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\system.componentmodel.typeconverter\4.3.0\lib\netstandard1.0\System.ComponentModel.TypeConverter.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\system.componentmodel.typeconverter\4.3.0\lib\netstandard1.0\System.ComponentModel.TypeConverter.dll">
       <PackagePath>System.ComponentModel.TypeConverter.dll</PackagePath>
       <Modified>2016-11-04T21:55:44.000</Modified>
     </AppxPackagedFile>
@@ -262,11 +262,11 @@
       <PackagePath>System.Data.Common.dll</PackagePath>
       <Modified>2016-06-11T15:13:32.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\system.diagnostics.contracts\4.3.0\lib\netcore50\System.Diagnostics.Contracts.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\system.diagnostics.contracts\4.3.0\lib\netcore50\System.Diagnostics.Contracts.dll">
       <PackagePath>System.Diagnostics.Contracts.dll</PackagePath>
       <Modified>2016-11-04T21:55:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\system.diagnostics.diagnosticsource\4.3.0\lib\netstandard1.3\System.Diagnostics.DiagnosticSource.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\system.diagnostics.diagnosticsource\4.3.0\lib\netstandard1.3\System.Diagnostics.DiagnosticSource.dll">
       <PackagePath>System.Diagnostics.DiagnosticSource.dll</PackagePath>
       <Modified>2016-11-04T21:55:52.000</Modified>
     </AppxPackagedFile>
@@ -274,7 +274,7 @@
       <PackagePath>System.Diagnostics.StackTrace.dll</PackagePath>
       <Modified>2016-07-01T07:48:16.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\system.dynamic.runtime\4.3.0\lib\netcore50\System.Dynamic.Runtime.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\system.dynamic.runtime\4.3.0\lib\netcore50\System.Dynamic.Runtime.dll">
       <PackagePath>System.Dynamic.Runtime.dll</PackagePath>
       <Modified>2016-11-04T21:56:06.000</Modified>
     </AppxPackagedFile>
@@ -282,15 +282,15 @@
       <PackagePath>System.Globalization.Extensions.dll</PackagePath>
       <Modified>2016-06-11T15:13:40.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\system.io.compression\4.3.0\runtimes\win\lib\netstandard1.3\System.IO.Compression.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\system.io.compression\4.3.0\runtimes\win\lib\netstandard1.3\System.IO.Compression.dll">
       <PackagePath>System.IO.Compression.dll</PackagePath>
       <Modified>2016-11-04T21:56:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\system.io.compression.zipfile\4.3.0\lib\netstandard1.3\System.IO.Compression.ZipFile.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\system.io.compression.zipfile\4.3.0\lib\netstandard1.3\System.IO.Compression.ZipFile.dll">
       <PackagePath>System.IO.Compression.ZipFile.dll</PackagePath>
       <Modified>2016-11-04T21:56:04.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\system.io.filesystem.primitives\4.3.0\lib\netstandard1.3\System.IO.FileSystem.Primitives.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\system.io.filesystem.primitives\4.3.0\lib\netstandard1.3\System.IO.FileSystem.Primitives.dll">
       <PackagePath>System.IO.FileSystem.Primitives.dll</PackagePath>
       <Modified>2016-11-04T21:56:08.000</Modified>
     </AppxPackagedFile>
@@ -302,23 +302,23 @@
       <PackagePath>System.IO.UnmanagedMemoryStream.dll</PackagePath>
       <Modified>2016-06-11T15:13:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\system.linq\4.3.0\lib\netcore50\System.Linq.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\system.linq\4.3.0\lib\netcore50\System.Linq.dll">
       <PackagePath>System.Linq.dll</PackagePath>
       <Modified>2016-11-04T21:56:20.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\system.linq.expressions\4.3.0\lib\netcore50\System.Linq.Expressions.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\system.linq.expressions\4.3.0\lib\netcore50\System.Linq.Expressions.dll">
       <PackagePath>System.Linq.Expressions.dll</PackagePath>
       <Modified>2016-11-04T21:56:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\system.linq.parallel\4.0.1\lib\netcore50\System.Linq.Parallel.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\system.linq.parallel\4.0.1\lib\netcore50\System.Linq.Parallel.dll">
       <PackagePath>System.Linq.Parallel.dll</PackagePath>
-      <Modified>2016-06-11T15:13:52.000</Modified>
+      <Modified>2016-06-11T16:13:52.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\system.linq.queryable\4.0.1\lib\netcore50\System.Linq.Queryable.dll">
       <PackagePath>System.Linq.Queryable.dll</PackagePath>
       <Modified>2016-06-11T15:13:58.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\system.net.http\4.3.4\runtimes\win\lib\netcore50\System.Net.Http.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\system.net.http\4.3.4\runtimes\win\lib\netcore50\System.Net.Http.dll">
       <PackagePath>System.Net.Http.dll</PackagePath>
       <Modified>2018-09-07T03:59:08.000</Modified>
     </AppxPackagedFile>
@@ -326,7 +326,7 @@
       <PackagePath>System.Net.Http.Rtc.dll</PackagePath>
       <Modified>2016-06-11T15:13:56.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\system.net.nameresolution\4.3.0\runtimes\win\lib\netcore50\System.Net.NameResolution.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\system.net.nameresolution\4.3.0\runtimes\win\lib\netcore50\System.Net.NameResolution.dll">
       <PackagePath>System.Net.NameResolution.dll</PackagePath>
       <Modified>2016-11-04T21:56:26.000</Modified>
     </AppxPackagedFile>
@@ -358,7 +358,7 @@
       <PackagePath>System.Numerics.Vectors.WindowsRuntime.dll</PackagePath>
       <Modified>2016-06-11T15:14:06.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\system.objectmodel\4.3.0\lib\netcore50\System.ObjectModel.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\system.objectmodel\4.3.0\lib\netcore50\System.ObjectModel.dll">
       <PackagePath>System.ObjectModel.dll</PackagePath>
       <Modified>2016-11-04T21:56:40.000</Modified>
     </AppxPackagedFile>
@@ -382,35 +382,35 @@
       <PackagePath>System.Reflection.Emit.dll</PackagePath>
       <Modified>2016-06-11T15:14:16.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\system.reflection.emit.ilgeneration\4.3.0\lib\netcore50\System.Reflection.Emit.ILGeneration.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\system.reflection.emit.ilgeneration\4.3.0\lib\netcore50\System.Reflection.Emit.ILGeneration.dll">
       <PackagePath>System.Reflection.Emit.ILGeneration.dll</PackagePath>
       <Modified>2016-11-04T21:56:40.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\system.reflection.emit.lightweight\4.3.0\lib\netcore50\System.Reflection.Emit.Lightweight.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\system.reflection.emit.lightweight\4.3.0\lib\netcore50\System.Reflection.Emit.Lightweight.dll">
       <PackagePath>System.Reflection.Emit.Lightweight.dll</PackagePath>
       <Modified>2016-11-04T21:56:42.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\system.reflection.metadata\1.3.0\lib\portable-net45+win8\System.Reflection.Metadata.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\system.reflection.metadata\1.3.0\lib\portable-net45+win8\System.Reflection.Metadata.dll">
       <PackagePath>System.Reflection.Metadata.dll</PackagePath>
-      <Modified>2016-06-11T15:14:14.000</Modified>
+      <Modified>2016-06-12T06:14:14.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\system.reflection.typeextensions\4.3.0\lib\netcore50\System.Reflection.TypeExtensions.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\system.reflection.typeextensions\4.3.0\lib\netcore50\System.Reflection.TypeExtensions.dll">
       <PackagePath>System.Reflection.TypeExtensions.dll</PackagePath>
       <Modified>2016-11-04T21:56:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\system.runtime.interopservices.runtimeinformation\4.3.0\runtimes\win\lib\netcore50\System.Runtime.InteropServices.RuntimeInformation.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\system.runtime.interopservices.runtimeinformation\4.3.0\runtimes\win\lib\netcore50\System.Runtime.InteropServices.RuntimeInformation.dll">
       <PackagePath>System.Runtime.InteropServices.RuntimeInformation.dll</PackagePath>
-      <Modified>2016-11-04T21:57:00.000</Modified>
+      <Modified>2018-10-22T02:36:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\system.runtime.interopservices.windowsruntime\4.0.1\lib\netcore50\System.Runtime.InteropServices.WindowsRuntime.dll">
       <PackagePath>System.Runtime.InteropServices.WindowsRuntime.dll</PackagePath>
       <Modified>2016-06-11T15:14:26.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\system.runtime.numerics\4.3.0\lib\netcore50\System.Runtime.Numerics.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\system.runtime.numerics\4.3.0\lib\netcore50\System.Runtime.Numerics.dll">
       <PackagePath>System.Runtime.Numerics.dll</PackagePath>
       <Modified>2016-11-04T21:57:00.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\system.runtime.serialization.formatters\4.3.0\lib\netstandard1.4\System.Runtime.Serialization.Formatters.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\system.runtime.serialization.formatters\4.3.0\lib\netstandard1.4\System.Runtime.Serialization.Formatters.dll">
       <PackagePath>System.Runtime.Serialization.Formatters.dll</PackagePath>
       <Modified>2016-11-04T21:56:58.000</Modified>
     </AppxPackagedFile>
@@ -418,7 +418,7 @@
       <PackagePath>System.Runtime.Serialization.Json.dll</PackagePath>
       <Modified>2017-02-09T06:26:02.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\system.runtime.serialization.primitives\4.3.0\lib\netcore50\System.Runtime.Serialization.Primitives.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\system.runtime.serialization.primitives\4.3.0\lib\netcore50\System.Runtime.Serialization.Primitives.dll">
       <PackagePath>System.Runtime.Serialization.Primitives.dll</PackagePath>
       <Modified>2016-11-04T21:57:02.000</Modified>
     </AppxPackagedFile>
@@ -426,7 +426,7 @@
       <PackagePath>System.Runtime.Serialization.Xml.dll</PackagePath>
       <Modified>2017-02-09T06:26:02.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\system.runtime.windowsruntime\4.3.0\runtimes\win8\lib\netstandard1.3\System.Runtime.WindowsRuntime.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\system.runtime.windowsruntime\4.3.0\runtimes\win8\lib\netstandard1.3\System.Runtime.WindowsRuntime.dll">
       <PackagePath>System.Runtime.WindowsRuntime.dll</PackagePath>
       <Modified>2016-11-04T21:57:02.000</Modified>
     </AppxPackagedFile>
@@ -434,33 +434,33 @@
       <PackagePath>System.Runtime.WindowsRuntime.UI.Xaml.dll</PackagePath>
       <Modified>2016-06-11T15:14:32.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\system.security.claims\4.0.1\lib\netstandard1.3\System.Security.Claims.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\system.security.claims\4.0.1\lib\netstandard1.3\System.Security.Claims.dll">
       <PackagePath>System.Security.Claims.dll</PackagePath>
-      <Modified>2016-06-11T15:14:40.000</Modified>
+      <Modified>2016-06-12T06:14:40.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\system.security.cryptography.algorithms\4.3.0\runtimes\win\lib\netcore50\System.Security.Cryptography.Algorithms.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\system.security.cryptography.algorithms\4.3.0\runtimes\win\lib\netcore50\System.Security.Cryptography.Algorithms.dll">
       <PackagePath>System.Security.Cryptography.Algorithms.dll</PackagePath>
       <Modified>2016-11-04T21:57:14.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\system.security.cryptography.cng\4.3.0\runtimes\win\lib\netstandard1.4\System.Security.Cryptography.Cng.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\system.security.cryptography.cng\4.3.0\runtimes\win\lib\netstandard1.4\System.Security.Cryptography.Cng.dll">
       <PackagePath>System.Security.Cryptography.Cng.dll</PackagePath>
       <Modified>2016-11-04T21:57:10.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\system.security.cryptography.encoding\4.3.0\runtimes\win\lib\netstandard1.3\System.Security.Cryptography.Encoding.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\system.security.cryptography.encoding\4.3.0\runtimes\win\lib\netstandard1.3\System.Security.Cryptography.Encoding.dll">
       <PackagePath>System.Security.Cryptography.Encoding.dll</PackagePath>
       <Modified>2016-11-04T21:57:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\system.security.cryptography.primitives\4.3.0\lib\netstandard1.3\System.Security.Cryptography.Primitives.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\system.security.cryptography.primitives\4.3.0\lib\netstandard1.3\System.Security.Cryptography.Primitives.dll">
       <PackagePath>System.Security.Cryptography.Primitives.dll</PackagePath>
       <Modified>2016-11-04T21:57:18.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\system.security.cryptography.x509certificates\4.3.0\runtimes\win\lib\netcore50\System.Security.Cryptography.X509Certificates.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\system.security.cryptography.x509certificates\4.3.0\runtimes\win\lib\netcore50\System.Security.Cryptography.X509Certificates.dll">
       <PackagePath>System.Security.Cryptography.X509Certificates.dll</PackagePath>
       <Modified>2016-11-04T21:57:18.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\system.security.principal\4.0.1\lib\netcore50\System.Security.Principal.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\system.security.principal\4.0.1\lib\netcore50\System.Security.Principal.dll">
       <PackagePath>System.Security.Principal.dll</PackagePath>
-      <Modified>2016-06-11T15:14:46.000</Modified>
+      <Modified>2016-06-12T06:14:46.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\system.servicemodel.duplex\4.0.4\lib\netcore50\System.ServiceModel.Duplex.dll">
       <PackagePath>System.ServiceModel.Duplex.dll</PackagePath>
@@ -482,27 +482,27 @@
       <PackagePath>System.ServiceModel.Security.dll</PackagePath>
       <Modified>2018-07-19T07:45:26.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\system.text.encoding.codepages\4.0.1\runtimes\win\lib\netstandard1.3\System.Text.Encoding.CodePages.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\system.text.encoding.codepages\4.0.1\runtimes\win\lib\netstandard1.3\System.Text.Encoding.CodePages.dll">
       <PackagePath>System.Text.Encoding.CodePages.dll</PackagePath>
-      <Modified>2016-06-11T15:14:46.000</Modified>
+      <Modified>2016-06-11T16:14:46.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\system.text.regularexpressions\4.3.0\lib\netcore50\System.Text.RegularExpressions.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\system.text.regularexpressions\4.3.0\lib\netcore50\System.Text.RegularExpressions.dll">
       <PackagePath>System.Text.RegularExpressions.dll</PackagePath>
       <Modified>2016-11-04T21:57:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\system.threading\4.3.0\lib\netcore50\System.Threading.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\system.threading\4.3.0\lib\netcore50\System.Threading.dll">
       <PackagePath>System.Threading.dll</PackagePath>
       <Modified>2016-11-04T21:57:30.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\system.threading.overlapped\4.3.0\runtimes\win\lib\netcore50\System.Threading.Overlapped.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\system.threading.overlapped\4.3.0\runtimes\win\lib\netcore50\System.Threading.Overlapped.dll">
       <PackagePath>System.Threading.Overlapped.dll</PackagePath>
       <Modified>2016-11-04T21:57:26.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\system.threading.tasks.dataflow\4.6.0\lib\netstandard1.1\System.Threading.Tasks.Dataflow.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\system.threading.tasks.dataflow\4.6.0\lib\netstandard1.1\System.Threading.Tasks.Dataflow.dll">
       <PackagePath>System.Threading.Tasks.Dataflow.dll</PackagePath>
-      <Modified>2016-06-11T15:14:52.000</Modified>
+      <Modified>2016-06-11T16:14:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\system.threading.tasks.extensions\4.3.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\system.threading.tasks.extensions\4.3.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll">
       <PackagePath>System.Threading.Tasks.Extensions.dll</PackagePath>
       <Modified>2016-11-04T21:57:24.000</Modified>
     </AppxPackagedFile>
@@ -510,15 +510,15 @@
       <PackagePath>System.Threading.Tasks.Parallel.dll</PackagePath>
       <Modified>2016-06-11T15:14:54.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\system.xml.readerwriter\4.3.0\lib\netcore50\System.Xml.ReaderWriter.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\system.xml.readerwriter\4.3.0\lib\netcore50\System.Xml.ReaderWriter.dll">
       <PackagePath>System.Xml.ReaderWriter.dll</PackagePath>
       <Modified>2016-11-04T21:57:36.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\system.xml.xdocument\4.3.0\lib\netcore50\System.Xml.XDocument.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\system.xml.xdocument\4.3.0\lib\netcore50\System.Xml.XDocument.dll">
       <PackagePath>System.Xml.XDocument.dll</PackagePath>
       <Modified>2016-11-04T21:57:34.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\.nuget\packages\system.xml.xmldocument\4.3.0\lib\netstandard1.3\System.Xml.XmlDocument.dll">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\.nuget\packages\system.xml.xmldocument\4.3.0\lib\netstandard1.3\System.Xml.XmlDocument.dll">
       <PackagePath>System.Xml.XmlDocument.dll</PackagePath>
       <Modified>2016-11-04T21:57:34.000</Modified>
     </AppxPackagedFile>
@@ -526,67 +526,67 @@
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
       <Modified>2016-06-11T15:15:04.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\Desktop\BMS\DemoIoT\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\Desktop\BMS_Outsource\RunningTask\DemoIoT\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2021-02-13T08:38:53.295</Modified>
+      <Modified>2021-02-26T01:49:47.096</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\Desktop\BMS\DemoIoT\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\Desktop\BMS_Outsource\RunningTask\DemoIoT\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2021-01-31T07:30:10.513</Modified>
+      <Modified>2021-02-26T01:49:46.934</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\Desktop\BMS\DemoIoT\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\Desktop\BMS_Outsource\RunningTask\DemoIoT\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-01-31T07:30:10.522</Modified>
+      <Modified>2021-02-26T01:49:46.935</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\Desktop\BMS\DemoIoT\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\Desktop\BMS_Outsource\RunningTask\DemoIoT\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-01-31T07:30:10.524</Modified>
+      <Modified>2021-02-26T01:49:46.936</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\Desktop\BMS\DemoIoT\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\Desktop\BMS_Outsource\RunningTask\DemoIoT\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-01-31T07:30:10.526</Modified>
+      <Modified>2021-02-26T01:49:46.937</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\Desktop\BMS\DemoIoT\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\Desktop\BMS_Outsource\RunningTask\DemoIoT\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-01-31T07:30:10.528</Modified>
+      <Modified>2021-02-26T01:49:46.939</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\Desktop\BMS\DemoIoT\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\Desktop\BMS_Outsource\RunningTask\DemoIoT\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-01-31T07:30:10.529</Modified>
+      <Modified>2021-02-26T01:49:46.940</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\Desktop\BMS\DemoIoT\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\Desktop\BMS_Outsource\RunningTask\DemoIoT\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-01-31T07:30:10.531</Modified>
+      <Modified>2021-02-26T01:49:46.941</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\Desktop\BMS\DemoIoT\bin\x64\Debug\App1.xr.xml">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\Desktop\BMS_Outsource\RunningTask\DemoIoT\bin\x64\Debug\App1.xr.xml">
       <PackagePath>App1.xr.xml</PackagePath>
-      <Modified>2021-02-24T13:09:08.546</Modified>
+      <Modified>2021-02-26T01:49:49.601</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\Desktop\BMS\DemoIoT\bin\x64\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\Desktop\BMS_Outsource\RunningTask\DemoIoT\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2021-02-24T13:10:13.153</Modified>
+      <Modified>2021-02-26T01:54:54.606</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\Desktop\BMS\DemoIoT\bin\x64\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\Desktop\BMS_Outsource\RunningTask\DemoIoT\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2021-02-24T15:58:46.508</Modified>
+      <Modified>2021-02-26T01:54:54.606</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2019-03-18T10:33:42.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\Desktop\BMS\DemoIoT\bin\x64\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\Desktop\BMS_Outsource\RunningTask\DemoIoT\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2021-02-25T15:11:15.706</Modified>
+      <Modified>2021-02-26T01:55:05.532</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ToanNg\Desktop\BMS\DemoIoT\bin\x64\Debug\Core\App1.exe">
+    <AppxPackagedFile Include="C:\Users\PhucNguyen\Desktop\BMS_Outsource\RunningTask\DemoIoT\bin\x64\Debug\Core\App1.exe">
       <PackagePath>App1.exe</PackagePath>
-      <Modified>2021-02-25T17:00:10.421</Modified>
+      <Modified>2021-02-26T04:21:36.048</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

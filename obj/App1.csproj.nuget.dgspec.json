@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ToanNg\\Desktop\\BMS\\DemoIoT\\App1.csproj": {}
+    "C:\\Users\\PhucNguyen\\Desktop\\BMS_Outsource\\RunningTask\\DemoIoT\\App1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ToanNg\\Desktop\\BMS\\DemoIoT\\App1.csproj": {
+    "C:\\Users\\PhucNguyen\\Desktop\\BMS_Outsource\\RunningTask\\DemoIoT\\App1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ToanNg\\Desktop\\BMS\\DemoIoT\\App1.csproj",
+        "projectUniqueName": "C:\\Users\\PhucNguyen\\Desktop\\BMS_Outsource\\RunningTask\\DemoIoT\\App1.csproj",
         "projectName": "App1",
-        "projectPath": "C:\\Users\\ToanNg\\Desktop\\BMS\\DemoIoT\\App1.csproj",
-        "packagesPath": "C:\\Users\\ToanNg\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ToanNg\\Desktop\\BMS\\DemoIoT\\obj\\",
+        "projectPath": "C:\\Users\\PhucNguyen\\Desktop\\BMS_Outsource\\RunningTask\\DemoIoT\\App1.csproj",
+        "packagesPath": "C:\\Users\\PhucNguyen\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PhucNguyen\\Desktop\\BMS_Outsource\\RunningTask\\DemoIoT\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\ToanNg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\PhucNguyen\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ToanNg\\Desktop\\BMS\\DemoIoT\\ConsoleApp1\\ConsoleApp1.csproj": {}
+    "C:\\Users\\PhucNguyen\\Desktop\\BMS_Outsource\\RunningTask\\DemoIoT\\ConsoleApp1\\ConsoleApp1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ToanNg\\Desktop\\BMS\\DemoIoT\\ConsoleApp1\\ConsoleApp1.csproj": {
+    "C:\\Users\\PhucNguyen\\Desktop\\BMS_Outsource\\RunningTask\\DemoIoT\\ConsoleApp1\\ConsoleApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ToanNg\\Desktop\\BMS\\DemoIoT\\ConsoleApp1\\ConsoleApp1.csproj",
+        "projectUniqueName": "C:\\Users\\PhucNguyen\\Desktop\\BMS_Outsource\\RunningTask\\DemoIoT\\ConsoleApp1\\ConsoleApp1.csproj",
         "projectName": "ConsoleApp1",
-        "projectPath": "C:\\Users\\ToanNg\\Desktop\\BMS\\DemoIoT\\ConsoleApp1\\ConsoleApp1.csproj",
-        "packagesPath": "C:\\Users\\ToanNg\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ToanNg\\Desktop\\BMS\\DemoIoT\\ConsoleApp1\\obj\\",
+        "projectPath": "C:\\Users\\PhucNguyen\\Desktop\\BMS_Outsource\\RunningTask\\DemoIoT\\ConsoleApp1\\ConsoleApp1.csproj",
+        "packagesPath": "C:\\Users\\PhucNguyen\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PhucNguyen\\Desktop\\BMS_Outsource\\RunningTask\\DemoIoT\\ConsoleApp1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\ToanNg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\PhucNguyen\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -71,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

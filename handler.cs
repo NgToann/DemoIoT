@@ -148,23 +148,24 @@ namespace App1
                 if (nic.NetworkInterfaceType != NetworkInterfaceType.Ethernet) continue;
                 if (nic.OperationalStatus == OperationalStatus.Up)
                 {
-                    result = ByteArrayToString(nic.GetPhysicalAddress().GetAddressBytes());
+                    //result = ByteArrayToString(nic.GetPhysicalAddress().GetAddressBytes());
+                    result = BitConverter.ToString(nic.GetPhysicalAddress().GetAddressBytes());
                     break;
                 }
             }
             return result;
         }
-        public static string ByteArrayToString(byte[] ba)
-        {
-            StringBuilder hex = new StringBuilder(ba.Length * 2);
-            for (int i = 0; i < ba.Length; i++)
-            {
-                hex.AppendFormat("{0:x2}", ba[i]);
-                if (i < ba.Length - 1)
-                    hex.Append(':');
-            }
-            return hex.ToString();
-        }
+        //public static string ByteArrayToString(byte[] ba)
+        //{
+        //    StringBuilder hex = new StringBuilder(ba.Length * 2);
+        //    for (int i = 0; i < ba.Length; i++)
+        //    {
+        //        hex.AppendFormat("{0:x2}", ba[i]);
+        //        if (i < ba.Length - 1)
+        //            hex.Append(':');
+        //    }
+        //    return hex.ToString();
+        //}
 
 
         private static string GetUUID()

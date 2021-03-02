@@ -24,19 +24,21 @@ namespace ConsoleApp1
             //    new MediaTypeWithQualityHeaderValue("application/json"));
             //var x = PutDeviceModel("api/devices/credentials");
 
-            //string macAddress = "";
-            //foreach (NetworkInterface nic in NetworkInterface.GetAllNetworkInterfaces())
-            //{
-            //    // Only consider Ethernet network interfaces, thereby ignoring any
-            //    // loopback devices etc.
-            //    if (nic.NetworkInterfaceType != NetworkInterfaceType.Ethernet) continue;
-            //    if (nic.OperationalStatus == OperationalStatus.Up)
-            //    {
-            //        macAddress = ByteArrayToString(nic.GetPhysicalAddress().GetAddressBytes());
-            //        break;
-            //    }
-            //}
-            //Console.WriteLine(macAddress);
+            string macAddress = "";
+            var nics = NetworkInterface.GetAllNetworkInterfaces();
+            foreach (NetworkInterface nic in nics)
+            {
+                // Only consider Ethernet network interfaces, thereby ignoring any
+                // loopback devices etc.
+                if (nic.NetworkInterfaceType != NetworkInterfaceType.Ethernet) continue;
+                if (nic.OperationalStatus == OperationalStatus.Up)
+                {
+                    //macAddress = ByteArrayToString(nic.GetPhysicalAddress().GetAddressBytes());
+                    macAddress = BitConverter.ToString(nic.GetPhysicalAddress().GetAddressBytes());
+                    break;
+                }
+            }
+            Console.WriteLine(macAddress);
 
             // STEP 1: get mqtt credentials if not available
             // STEP 2: connect to MQTT broker with this credential
@@ -75,22 +77,22 @@ namespace ConsoleApp1
             Console.ReadLine();
         }
 
-        private static string GetId()
-        {
-            if (Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.System.Profile.HardwareIdentification"))
-            {
-                var token = HardwareIdentification.GetPackageSpecificToken(null);
-                var hardwareId = token.Id;
-                var dataReader = Windows.Storage.Streams.DataReader.FromBuffer(hardwareId);
+        //private static string GetId()
+        //{
+            //if (Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.System.Profile.HardwareIdentification"))
+            //{
+            //    var token = HardwareIdentification.GetPackageSpecificToken(null);
+            //    var hardwareId = token.Id;
+            //    var dataReader = Windows.Storage.Streams.DataReader.FromBuffer(hardwareId);
 
-                byte[] bytes = new byte[hardwareId.Length];
-                dataReader.ReadBytes(bytes);
+            //    byte[] bytes = new byte[hardwareId.Length];
+            //    dataReader.ReadBytes(bytes);
 
-                return BitConverter.ToString(bytes).Replace("-", "");
-            }
+            //    return BitConverter.ToString(bytes).Replace("-", "");
+            //}
 
-            throw new Exception("NO API FOR DEVICE ID PRESENT!");
-        }
+            //throw new Exception("NO API FOR DEVICE ID PRESENT!");
+        //}
 
         public class DeviceModel
         {

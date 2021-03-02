@@ -22,11 +22,12 @@ using Windows.UI.Xaml.Navigation;
 using System.Diagnostics;
 using Windows.UI.Core;
 using MQTTnet.Extensions.ManagedClient;
-using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using Newtonsoft.Json;
 using Windows.System.Profile;
+using System.Net.NetworkInformation;
+using Windows.Networking.NetworkOperators;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -87,12 +88,47 @@ namespace App1
             //timerReSend = new DispatcherTimer();
             //timerReSend.Interval = new TimeSpan(0, 0, 10);
             //timerReSend.Tick += TimerResend_Tick;
-
+            var macAdd = GetMacAddressDevice();
             var y = GetHardwareId();
             var x = GetId();
             //var x = new Handler();
             //x.MQTTHandler();
 
+        }
+
+        private string GetMacAddressDevice()
+        {
+            //NetworkOperatorTetheringClient notc = new NetworkOperatorTetheringClient();
+            
+            string result = null;
+            var networkProfiles = Windows.Networking.Connectivity.NetworkInformation.GetConnectionProfiles().ToList();
+            foreach (var np in networkProfiles)
+            {
+                if (np.ProfileName == "Ethernet")
+                {
+                    //"30-0E-D5-0F-BA-C8"
+                    var npGuid = np.NetworkAdapter.NetworkAdapterId;
+                    var npBytes = npGuid.ToByteArray();
+                    result = BitConverter.ToString(npBytes);
+                }
+            }
+
+            var nics = NetworkInterface.GetAllNetworkInterfaces();
+            if (nics == null)
+                return result;
+            foreach (NetworkInterface nic in nics)
+            {
+                // Only consider Ethernet network interfaces, thereby ignoring any
+                // loopback devices etc.
+                if (nic.NetworkInterfaceType != NetworkInterfaceType.Ethernet) continue;
+                if (nic.OperationalStatus == OperationalStatus.Up)
+                {
+                    //result = ByteArrayToString(nic.GetPhysicalAddress().GetAddressBytes());
+                    result = BitConverter.ToString(nic.GetPhysicalAddress().GetAddressBytes());
+                    break;
+                }
+            }
+            return result;
         }
 
         private string GetHardwareId()
